@@ -184,25 +184,17 @@ if (e.code=='ArrowRight'){
     const src = imges[currentIndex].src;
     myModal.querySelector("img").setAttribute("src",src);
 }
-  })
-
-
-document.addEventListener("keydown",function(e){
-    if (e.code=='ArrowLeft'){
+ else if(e.code=='ArrowLeft'){
         currentIndex--;
         if(currentIndex< 0 ){
             currentIndex=imges.length-1;
         }
         const src = imges[currentIndex].src;
-        myModal.querySelector("img").setAttribute("src",src);
-    }
-      })
-    }
+        myModal.querySelector("img").setAttribute("src",src);}
 
-
-
-
-
-
-
-
+        else if(e.code=='Escape'){
+            myModal.classList.add('d-none');
+        }
+        
+    
+  })}
